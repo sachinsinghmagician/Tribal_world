@@ -79,9 +79,8 @@ const Hero = () => {
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0   to-crypto-dark/80 absolute inset-0 bg-gradient-to-b from-[rgba(39,255,119,0.1)] via-[rgba(39,255,119,0.2)] to-crypto-dark/90
-" />
-        <div className="absolute inset-0 bg-[url('public/images/wmremove-transformed.jpeg')] bg-cover bg-center opacity-30 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(0,112,255,0.1)] via-[rgba(0,112,255,0.2)] to-blue-900/90" />
+        <div className="absolute inset-0 bg-[url('public/images/blockchain-world.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay" />
 
         {/* Animated particles */}
         <div className="absolute inset-0 overflow-hidden">
@@ -115,14 +114,15 @@ const Hero = () => {
               variants={itemVariants}
               className="text-4xl md:text-6xl font-bold mb-6 font-display"
             >
-              <span className="gradient-text"> Tribal World</span> Crypto <br /> Presale is Live
+              <span className="gradient-text"> MMC</span> Crypto <br /> Plan is Live
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
               className="text-lg text-gray-300 mb-8 max-w-lg"
             >
-              Step into Tribe World — a next-generation decentralized platform where community meets innovation. Powered by blockchain, our referral-based ecosystem lets you grow, earn, and rise through three powerful earning structures. Become part of a tribe that believes in collective success and transparent wealth creation.
+              Welcome to MMC — Your Gateway to Decentralized Wealth Creation!
+              Step into a revolutionary platform where blockchain technology meets community empowerment. MMC offers a secure, transparent, and scalable ecosystem that transforms how you earn, grow, and succeed.  Join MMC — where collective success is the foundation, and transparent wealth creation is the goal.
             </motion.p>
 
             {/* Stats */}
@@ -148,7 +148,7 @@ const Hero = () => {
                 <div className="text-2xl text-crypto-accent font-bold">
                   <CountUp end={70} duration={2} />%
                 </div>
-                <div className="text-sm text-gray-400">Presale Sold</div>
+                <div className="text-sm text-gray-400">Plan Sold</div>
               </div>
             </motion.div>
 
@@ -157,10 +157,12 @@ const Hero = () => {
               variants={itemVariants}
               className="flex flex-wrap gap-4"
             >
-              <button className="bg-gradient-to-b from-green-500 to-gray-900 text-white px-7 py-3 rounded-full font-semibold shadow-[0_4px_15.7px_rgba(12,7,50,0),_inset_0_-2px_2px_1px_#34d399,_inset_0_2px_3px_3px_rgb(14,22,35)] transition-all duration-300 hover:from-green-600 hover:to-gray-800 hover:shadow-[0_4px_20px_rgba(12,7,50,0),_inset_0_-2px_2px_1px_#6ee7b7,_inset_0_2px_4px_3px_rgb(14,22,35)]">
-                Buy Tokens Now
+              <button className="bg-gradient-to-b from-blue-500 to-gray-900 text-white px-7 py-3 rounded-full font-semibold  transition-all duration-300 hover:from-blue-600 hover:to-gray-800 hover:shadow-[ 0 4px 20px rgba(0, 0, 255, 0.3), 
+  inset 0 -2px 2px 1px #3b82f6, 
+  inset 0 2px 4px 3px rgb(29, 78, 216)]">
+                Sign in
               </button>
-              <button className="btn btn-outline rounded-full border-2 border-green-500 text-white-500 hover:bg-green-500 hover:text-white transition-all duration-300 ease-in-out px-5">
+              <button className="btn btn-outline rounded-full border-2 border-blue-500 text-white-500hover:from-blue-600 hover:to-gray-800 hover:shadow-[ 0 4px 20px rgba(0, 0, 255, 0.3) hover:text-white transition-all duration-300 ease-in-out px-5">
                 View Whitepaper
               </button>
             </motion.div>
@@ -183,9 +185,9 @@ const Hero = () => {
             >
               <motion.img
                 variants={coinVariants}
-                src="public/images/tribalcoin.png"
+                src="images/unnamed (7).png"
                 alt="Crypto Coin"
-                className="w-52 h-52 md:w-72 md:h-72 "
+                className="w-152 h-152 md:w-72 md:h-72 "
               />
               <div className="absolute inset-0 bg-gradient-radial from-primary-500/20 to-transparent rounded-full animate-pulse-slow" />
             </motion.div>
@@ -195,22 +197,22 @@ const Hero = () => {
               variants={itemVariants}
               className="bg-[rgba(14,26,33,0)] backdrop-blur-md rounded-xl p-6 border border-crypto-border"
             >
-              <h3 className="text-xl font-semibold text-white mb-4">Presale Ends In:</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">Launch Begins In</h3>
 
               <div className="grid grid-cols-4 gap-2">
-                <div className="bg-[rgba(39,255,119,0.3)] p-3 rounded-lg shadow-md">
+                <div className="bg-[rgba(39,89,255,0.52)] p-3 rounded-lg shadow-md">
                   <div className="text-3xl font-bold text-white">{timeLeft.days.toString().padStart(2, '0')}</div>
                   <div className="text-xs text-gray-400">Days</div>
                 </div>
-                <div className="bg-[rgba(39,255,119,0.3)] p-3 rounded-lg shadow-md">
+                <div className="bg-[rgba(39,89,255,0.52)] p-3 rounded-lg shadow-md">
                   <div className="text-3xl font-bold text-white">{timeLeft.hours.toString().padStart(2, '0')}</div>
                   <div className="text-xs text-gray-400">Hours</div>
                 </div>
-                <div className="bg-[rgba(39,255,119,0.3)] p-3 rounded-lg shadow-md">
+                <div className="bg-[rgba(39,89,255,0.52)] p-3 rounded-lg shadow-md">
                   <div className="text-3xl font-bold text-white">{timeLeft.minutes.toString().padStart(2, '0')}</div>
                   <div className="text-xs text-gray-400">Minutes</div>
                 </div>
-                <div className="bg-[rgba(39,255,119,0.3)] p-3 rounded-lg shadow-md">
+                <div className="bg-[rgba(39,89,255,0.52)] p-3 rounded-lg shadow-md">
                   <div className="text-3xl font-bold text-white">{timeLeft.seconds.toString().padStart(2, '0')}</div>
                   <div className="text-xs text-gray-400">Seconds</div>
                 </div>
@@ -224,8 +226,8 @@ const Hero = () => {
                   />
                 </div>
                 <div className="flex justify-between mt-2 text-sm">
-                  <span className="text-gray-400">0 TOKENS</span>
-                  <span className="text-gray-400">10M TOKENS</span>
+                  <span className="text-gray-400">0 MATIC</span>
+                  <span className="text-gray-400">10M MATIC</span>
                 </div>
               </div>
             </motion.div>

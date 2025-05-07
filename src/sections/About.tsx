@@ -64,7 +64,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="absolute inset-0 bg-gradient-to-b from-[rgba(39,255,119,0.1)] via-[rgba(39,255,119,0.2)] to-crypto-dark/90
+    <section id="about" className="absolute inset-0 bg-gradient-to-b from-[rgba(0,112,255,0.1)] via-[rgba(0,112,255,0.2)] to-blue-900/90
  relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
@@ -83,7 +83,7 @@ const About = () => {
           </motion.h2>
 
           <motion.p variants={itemVariants} className="section-subtitle">
-          Tribal World's blockchain infrastructure is built to overcome the blockchain trilemma — delivering unmatched security, true decentralization, and seamless scalability, all in one unified tribal ecosystem.
+          MMC's blockchain infrastructure resolves the trilemma — ensuring top-tier security, genuine decentralization, and scalable performance, all within one cohesive tribal ecosystem.
           </motion.p>
         </motion.div>
 
@@ -99,7 +99,7 @@ const About = () => {
             <motion.div variants={itemVariants} className="relative z-10">
               <div className="relative">
                 <img
-                  src="public/images/anastasiia-ornarin-3l6svaOzqfc-unsplash.jpg"
+                  src="images/hitech-lab-robotics-setup-1.png"
                   alt="Blockchain Network"
                   className="rounded-lg shadow-2xl"
                 />
@@ -121,7 +121,7 @@ const About = () => {
                 }}
               >
                 <img
-                  src="public/images/tribalcoin.png"
+                  src="images/unnamed (7).png"
                   alt="Ethereum Coin"
                   className="w-full h-full object-contain"
                 />
@@ -129,7 +129,7 @@ const About = () => {
 
               {/* Stats card */}
               <motion.div
-                className="absolute -bottom-10 -left-10 md:left-10 bg-green-900 backdrop-blur-sm p-4 rounded-lg border border-crypto-border shadow-xl"
+                className="absolute -bottom-10 -left-10 md:left-10 bg-blue-900 backdrop-blur-sm p-4 rounded-lg border border-crypto-border shadow-xl"
                 variants={itemVariants}
               >
                 <div className="flex items-center space-x-3">
@@ -150,14 +150,14 @@ const About = () => {
               variants={itemVariants}
               className="text-2xl md:text-3xl font-bold mb-6"
             >
-              Reimagining the <span className="gradient-text">Reimagining the Future of Community-Driven Finance</span>
+              Reimagining the <span className="gradient-text">Redefining the Future of Community-Driven Finance.</span>
             </motion.h3>
 
             <motion.p
               variants={itemVariants}
               className="text-gray-300 mb-8"
             >
-              Tribal World isn't just a platform — it's a movement. Our blockchain ecosystem is crafted to empower communities through decentralized, fast, and secure financial tools. With innovative tokenomics, real-world utility, and a reward-driven model, we're building a sustainable digital tribe where every member thrives and contributes to long-term value creation.
+             MMC is more than a platform — it's a movement. Our blockchain ecosystem empowers communities with fast, secure, and decentralized financial tools. Through innovative tokenomics, real-world utility, and a reward-driven model, we’re cultivating a sustainable digital tribe where every member thrives and contributes to lasting value creation.
             </motion.p>
 
             {/* Features grid */}
@@ -169,7 +169,7 @@ const About = () => {
                 <motion.div
                   key={`feature-${index}`}
                   variants={itemVariants}
-                  className="bg-[rgba(1, 10, 4, 0)] backdrop-blur-md p-6 rounded-lg border border-crypto-border hover:border-green-500 transition-all duration-300"
+                  className="bg-[rgba(1, 10, 4, 0)] backdrop-blur-md p-6 rounded-lg border border-crypto-border hover:border-blue-500 transition-all duration-300"
                 >
                   <div className="mb-4">{feature.icon}</div>
                   <h4 className="text-xl font-semibold mb-2 text-white">{feature.title}</h4>

@@ -73,7 +73,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="section absolute inset-0 bg-gradient-to-b from-[rgba(39,255,119,0.1)] via-[rgba(39,255,119,0.2)] to-crypto-dark/90
+    <section id="faq" className="section absolute inset-0 bg-gradient-to-b from-[rgba(0,112,255,0.1)] via-[rgba(0,112,255,0.2)] to-blue-900/90
  relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
@@ -157,10 +157,12 @@ const FAQ = () => {
             Our team is always ready to help. Reach out to us through any of our community channels.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <button className="btn btn-primary bg-gradient-to-b from-green-500 to-gray-900 text-white px-7 py-3 rounded-full font-semibold shadow-[0_4px_15.7px_rgba(12,7,50,0),_inset_0_-2px_2px_1px_#34d399,_inset_0_2px_3px_3px_rgb(14,22,35)] transition-all duration-300 hover:from-green-600 hover:to-gray-800 hover:shadow-[0_4px_20px_rgba(12,7,50,0),_inset_0_-2px_2px_1px_#6ee7b7,_inset_0_2px_4px_3px_rgb(14,22,35)]">
+            <button className="bg-gradient-to-b from-blue-500 to-gray-900 text-white px-7 py-3 rounded-full font-semibold  transition-all duration-300 hover:from-blue-600 hover:to-gray-800 hover:shadow-[ 0 4px 20px rgba(0, 0, 255, 0.3), 
+  inset 0 -2px 2px 1px #3b82f6, 
+  inset 0 2px 4px 3px rgb(29, 78, 216)]">
               Join Discord Community
             </button>
-            <button className="btn btn-outline rounded-full border-2 border-green-500 text-white-500 hover:bg-green-500 hover:text-white transition-all duration-300 ease-in-out px-5">
+            <button className="btn btn-outline rounded-full border-2 border-blue-500 text-white-500 hover:bg-Blue-500 hover:text-white transition-all duration-300 ease-in-out px-5">
               Contact Support
             </button>
           </div>

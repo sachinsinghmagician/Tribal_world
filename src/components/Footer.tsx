@@ -80,7 +80,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-[rgba(39,255,119,0.1)] via-[rgba(39, 255, 118, 0.02)] to-[rgba(39,255,119,0.1)]">
+    <footer className="bg-gradient-to-b from-[rgba(39,57,255,0.13)] via-[rgba(39, 255, 118, 0.02)] to-[rgba(50,39,255,0.1)]">
       <div className="container mx-auto px-4 py-12">
         <motion.div
           initial="hidden"
@@ -92,7 +92,7 @@ const Footer = () => {
           <motion.div variants={itemVariants}>
             <div className="mb-4">
               <span className="text-2xl font-bold gradient-text">
-                CryptoPresale
+                MMC
               </span>
             </div>
 
@@ -192,7 +192,7 @@ const Footer = () => {
           transition={{ delay: 0.6 }}
           className="text-center text-gray-500 text-sm mt-8"
         >
-          © {currentYear} CryptoPresale. All rights reserved.
+          © {currentYear} MMC. All rights reserved.
         </motion.div>
       </div>
     </footer>

@@ -112,7 +112,7 @@ const Roadmap = () => {
     <section id="roadmap" className="relative overflow-hidden py-16">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
-      <div className="absolute inset-0 bg-gradient-to-b from-[rgba(39,255,119,0.1)] via-[rgba(39,255,119,0.2)] to-crypto-dark/90 "  />
+      <div className="absolute inset-0 bg-gradient-to-b from-[rgba(0,112,255,0.1)] via-[rgba(0,112,255,0.2)] to-blue-900/90 "  />
       <div className="absolute inset-0 bg-[url('/images/blockchain-world.jpg')] bg-cover bg-center opacity-5" />
       </div>
 
@@ -204,7 +204,9 @@ const Roadmap = () => {
           <p className="text-gray-300 mb-6">
             Excited about our journey? Join us now and be part of the revolution!
           </p>
-          <button className="bg-gradient-to-b from-green-500 to-gray-900 text-white px-7 py-3 rounded-full font-semibold shadow-[0_4px_15.7px_rgba(12,7,50,0),_inset_0_-2px_2px_1px_#34d399,_inset_0_2px_3px_3px_rgb(14,22,35)] transition-all duration-300 hover:from-green-600 hover:to-gray-800 hover:shadow-[0_4px_20px_rgba(12,7,50,0),_inset_0_-2px_2px_1px_#6ee7b7,_inset_0_2px_4px_3px_rgb(14,22,35)]">
+          <button className="bg-gradient-to-b from-blue-500 to-gray-900 text-white px-7 py-3 rounded-full font-semibold  transition-all duration-300 hover:from-blue-600 hover:to-gray-800 hover:shadow-[ 0 4px 20px rgba(0, 0, 255, 0.3), 
+  inset 0 -2px 2px 1px #3b82f6, 
+  inset 0 2px 4px 3px rgb(29, 78, 216)]">
             Join Our Community
           </button>
         </motion.div>

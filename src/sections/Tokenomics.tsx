@@ -1,13 +1,27 @@
 import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, Variants } from 'framer-motion';
 import { FaCoins, FaChartPie, FaExchangeAlt, FaLock, FaRocket, FaFileContract } from 'react-icons/fa';
+import SpinningBorderCard from "../components/SpinningBorderCard";
+import SpaceTunnel from "../components/Spacetunnel";
+
+interface TokenDetail {
+  icon: JSX.Element;
+  label: string;
+  value: string;
+}
+
+interface DistributionItem {
+  name: string;
+  percentage: number;
+  color: string;
+}
 
 const Tokenomics = () => {
-  const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, threshold : 0.1 });
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, { once: true, threshold: 0.1 });
 
   // Token distribution data
-  const tokenDistribution = [
+  const tokenDistribution: DistributionItem[] = [
     { name: 'Public Sale', percentage: 30, color: 'from-primary-400 to-primary-600' },
     { name: 'Liquidity Pool', percentage: 25, color: 'from-primary-500 to-primary-700' },
     { name: 'Team & Advisors', percentage: 15, color: 'from-primary-600 to-primary-800' },
@@ -17,11 +31,11 @@ const Tokenomics = () => {
   ];
 
   // Token details
-  const tokenDetails = [
+  const tokenDetails: TokenDetail[] = [
     {
       icon: <FaCoins />,
-      label: 'Token Name',
-      value: 'CRYPTO'
+      label: 'Investment Tier',
+      value: 'Tier 1: $100 - $1,000'
     },
     {
       icon: <FaFileContract />,
@@ -31,12 +45,12 @@ const Tokenomics = () => {
     {
       icon: <FaChartPie />,
       label: 'Total Supply',
-      value: '100,000,000'
+      value: '100,000,000 CRYPTO'
     },
     {
       icon: <FaExchangeAlt />,
       label: 'Initial Price',
-      value: '$0.05'
+      value: '$0.05 per Token'
     },
     {
       icon: <FaLock />,
@@ -51,7 +65,7 @@ const Tokenomics = () => {
   ];
 
   // Animation variants
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -61,7 +75,7 @@ const Tokenomics = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
@@ -75,15 +89,16 @@ const Tokenomics = () => {
   };
 
   return (
-    <section id="tokenomics" className="section absolute absolute inset-0 bg-gradient-to-b from-[rgba(39,255,119,0.1)] via-[rgba(39,255,119,0.2)] to-crypto-dark/90
-
- relative overflow-hidden">
+    <section 
+      id="tokenomics" 
+      className="relative inset-0 bg-gradient-to-b from-[rgba(0,112,255,0.1)] via-[rgba(0,112,255,0.2)] to-blue-900/90 overflow-hidden"
+    >
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[url('/images/network-blue-orange.jpg')] bg-cover bg-center opacity-10" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10" ref={sectionRef}>
+      <div className="container mx-auto px-4 relative z-10 py-16" ref={sectionRef}>
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -91,173 +106,84 @@ const Tokenomics = () => {
           className="text-center mb-16"
         >
           <motion.h2 variants={itemVariants} className="section-title">
-            <span className="gradient-text">Tokenomics</span>
+            <span className="gradient-text">Investment-driven Plan </span>
           </motion.h2>
 
           <motion.p variants={itemVariants} className="section-subtitle">
-            Our token economy is designed to ensure long-term sustainability, fair distribution,
-            and continuous value appreciation for all stakeholders.
+            Our token economy is built to guarantee long-term sustainability, equitable distribution, and consistent value growth for all stakeholders.
           </motion.p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* Left side - Distribution chart */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            className="relative"
-          >
-            <motion.h3
-              variants={itemVariants}
-              className="text-2xl font-bold mb-8 text-center"
-            >
-              Token Distribution
-            </motion.h3>
+        <div className="min-h-screen bg-gradient-to-l text-white rounded-md">
+          <div className="max-w-7xl mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Left side - Welcome Banner */}
+            <div className="flex flex-col items-center justify-center space-y-8">
+             
+              <SpaceTunnel />
+            </div>
 
-            {/* Pie chart visualization */}
-            <motion.div variants={itemVariants} className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 mx-auto relative">
-                {tokenDistribution.map((item, index) => {
-                  // Calculate SVG parameters for pie chart
-                  const startAngle = tokenDistribution
-                    .slice(0, index)
-                    .reduce((sum, curr) => sum + curr.percentage, 0) * 3.6; // Convert to degrees (360 / 100)
-
-                  const endAngle = startAngle + item.percentage * 3.6;
-
-                  // Convert to SVG arc coordinates
-                  const startX = 50 + 40 * Math.cos((startAngle - 90) * (Math.PI / 180));
-                  const startY = 50 + 40 * Math.sin((startAngle - 90) * (Math.PI / 180));
-                  const endX = 50 + 40 * Math.cos((endAngle - 90) * (Math.PI / 180));
-                  const endY = 50 + 40 * Math.sin((endAngle - 90) * (Math.PI / 180));
-
-                  // Determine if the arc should take the large-arc-flag
-                  const largeArcFlag = item.percentage > 50 ? 1 : 0;
-
-                  return (
-                    <motion.div
-                      key={`pie-${item.name}`}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: index * 0.1, duration: 0.5 }}
-                      className="absolute inset-0"
-                    >
-                      <svg viewBox="0 0 100 100" className="w-full h-full">
-                        <defs>
-                          <linearGradient id={`gradient-${index}`} x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" className={`stop-${item.color.split(' ')[0]}`} />
-                            <stop offset="100%" className={`stop-${item.color.split(' ')[1]}`} />
-                          </linearGradient>
-                        </defs>
-                        <path
-                          d={`M 50 50 L ${startX} ${startY} A 40 40 0 ${largeArcFlag} 1 ${endX} ${endY} Z`}
-                          fill={`url(#gradient-${index})`}
-                          stroke="#0a0e1c"
-                          strokeWidth="0.5"
-                          className="hover:opacity-90 transition-opacity cursor-pointer"
-                        />
-                      </svg>
-                    </motion.div>
-                  );
-                })}
-
-                {/* Center circle with icon */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-crypto-dark flex items-center justify-center animate-pulse-slow">
-                    <img
-                      src="/images/glass-bitcoin.png"
-                      alt="Token"
-                      className="w-12 h-12 md:w-16 md:h-16 object-contain"
-                    />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Legend */}
+            {/* Right side - Token Details */}
             <motion.div
               variants={containerVariants}
-              className="grid grid-cols-2 gap-4 mt-8"
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              className="flex flex-col items-center justify-center space-y-8"
             >
-              {tokenDistribution.map((item, index) => (
-                <motion.div
-                  key={`legend-${item.name}`}
-                  variants={itemVariants}
-                  className="flex items-center"
-                >
-                  <div className={`w-4 h-4 rounded-sm bg-gradient-to-r ${item.color} mr-2`} />
-                  <div className="text-sm">
-                    <span className="font-medium text-white">{item.name}</span>
-                    <span className="text-gray-400 ml-2">{item.percentage}%</span>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
+              <motion.h3
+                variants={itemVariants}
+                className="text-2xl font-bold text-center mb-8"
+              >
+               
+              </motion.h3>
 
-          {/* Right side - Token details */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-          >
+              <div className="p-8 w-full">
+                <h2 className="text-2xl font-bold text-white text-center mb-8">Token Information</h2>
+                <SpinningBorderCard tokenDetails={tokenDetails} />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-1 gap-16 items-center mt-16">
+          <div>
             <motion.h3
               variants={itemVariants}
               className="text-2xl font-bold mb-8 text-center"
             >
-              Token Details
+              
             </motion.h3>
+            {/* Add your pie chart visualization here */}
+          </div>
 
-            <motion.div variants={itemVariants} className="card mb-8 bg-[rgba(50, 196, 98, 0.77)] backdrop-blur-md p-6 rounded-lg border border-crypto-border hover:border-green-500">
-              {tokenDetails.map((detail, index) => (
-                <div
-                  key={`detail-${index}`}
-                  className={`flex justify-between items-center py-4 ${
-                    index !== tokenDetails.length - 1 ? 'border-b border-crypto-border' : ''
-                  }`}
-                >
-                  <div className="flex items-center">
-                    <div className="w-8 h-8 rounded-full bg-primary-500/20 flex items-center justify-center mr-3 text-primary-400">
-                      {detail.icon}
-                    </div>
-                    <span className="text-gray-300">{detail.label}</span>
-                  </div>
-                  <span className="font-medium text-white">{detail.value}</span>
+          {/* Token benefits */}
+          <motion.div variants={itemVariants}>
+            <h4 className="text-xl font-semibold mb-4">MMC Utility</h4>
+            <ul className="space-y-3 text-gray-300">
+              <li className="flex items-start">
+                <div className="w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center mr-3 text-primary-400 mt-1">
+                  <div className="w-2 h-2 bg-primary-400 rounded-full" />
                 </div>
-              ))}
-            </motion.div>
-
-            {/* Token benefits */}
-            <motion.div variants={itemVariants}>
-              <h4 className="text-xl font-semibold mb-4">Token Utility</h4>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center mr-3 text-primary-400 mt-1">
-                    <div className="w-2 h-2 bg-primary-400 rounded-full" />
-                  </div>
-                  <span>Governance rights for platform decisions</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center mr-3 text-primary-400 mt-1">
-                    <div className="w-2 h-2 bg-primary-400 rounded-full" />
-                  </div>
-                  <span>Reduced transaction fees on the platform</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center mr-3 text-primary-400 mt-1">
-                    <div className="w-2 h-2 bg-primary-400 rounded-full" />
-                  </div>
-                  <span>Access to exclusive platform features</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center mr-3 text-primary-400 mt-1">
-                    <div className="w-2 h-2 bg-primary-400 rounded-full" />
-                  </div>
-                  <span>Staking rewards for network security</span>
-                </li>
-              </ul>
-            </motion.div>
+                <span>Participate in Governance: Have a voice in key platform decisions, from feature updates to future developments</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center mr-3 text-primary-400 mt-1">
+                  <div className="w-2 h-2 bg-primary-400 rounded-full" />
+                </div>
+                <span>Lower Transaction Costs: Enjoy reduced fees on all transactions within the MMC ecosystem, maximizing your earnings.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center mr-3 text-primary-400 mt-1">
+                  <div className="w-2 h-2 bg-primary-400 rounded-full" />
+                </div>
+                <span>Exclusive Feature Access: Unlock premium tools and services available only to CRYPTO token holders</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-5 h-5 rounded-full bg-primary-500/20 flex items-center justify-center mr-3 text-primary-400 mt-1">
+                  <div className="w-2 h-2 bg-primary-400 rounded-full" />
+                </div>
+                <span>Earn Staking Rewards: Secure the network and earn passive income by staking your tokens</span>
+              </li>
+            </ul>
           </motion.div>
         </div>
       </div>

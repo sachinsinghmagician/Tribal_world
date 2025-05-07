@@ -63,7 +63,8 @@ const Presale = () => {
     <>
 
 
-      <section id="presale" className="section absolute inset-0 bg-gradient-to-b from-[rgba(39,255,119,0.1)] via-[rgba(39,255,119,0.2)] to-crypto-dark/90 relative overflow-hidden">
+      <section id="presale" className="section absolute inset-0 bg-gradient-to-b from-[rgba(0,112,255,0.1)] via-[rgba(0,112,255,0.2)] to-blue-900/90
+ relative overflow-hidden ">
         {/* Background elements */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[url('/images/blockchain-network.jpg')] bg-cover bg-center opacity-5" />
@@ -94,7 +95,7 @@ const Presale = () => {
 
             {/* Main content */}
             <div className="relative z-10 text-center px-4 max-w-xl w-full">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Tribe World</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">MMC</h1>
               <p className="text-lg md:text-xl text-gray-300 mb-8">
                 Something awesome is coming soon. Stay tuned!
               </p>
@@ -174,11 +175,13 @@ const Presale = () => {
           <div className="text-center mt-14">
             <p className="text-xl text-gray-300 mb-4">Want to stay ahead?</p>
             <div className="flex justify-center flex-wrap gap-4">
-              <button className="bg-gradient-to-b from-green-500 to-gray-900 text-white px-7 py-3 rounded-full font-semibold shadow-[0_4px_15.7px_rgba(12,7,50,0),_inset_0_-2px_2px_1px_#34d399,_inset_0_2px_3px_3px_rgb(14,22,35)] transition-all duration-300 hover:from-green-600 hover:to-gray-800 hover:shadow-[0_4px_20px_rgba(12,7,50,0),_inset_0_-2px_2px_1px_#6ee7b7,_inset_0_2px_4px_3px_rgb(14,22,35)]">Stay Updated</button>
-              <a href="https://discord.gg/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 border border-green-500 px-5 py-2 rounded-full hover:bg-green-700 transition">
+              <button className="bg-gradient-to-b from-blue-500 to-gray-900 text-white px-7 py-3 rounded-full font-semibold  transition-all duration-300 hover:from-blue-600 hover:to-gray-800 hover:shadow-[ 0 4px 20px rgba(0, 0, 255, 0.3), 
+  inset 0 -2px 2px 1px #3b82f6, 
+  inset 0 2px 4px 3px rgb(29, 78, 216)]">Stay Updated</button>
+              <a href="https://discord.gg/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 border border-blue-500 px-5 py-2 rounded-full hover:bg-blue-700 transition">
                 <FaDiscord /> Join Discord
               </a>
-              <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 border border-green-500 px-5 py-2 rounded-full hover:bg-green-700 transition">
+              <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 border border-blue-500 px-5 py-2 rounded-full hover:bg-blue-700 transition">
                 <FaTelegram /> Join Telegram
               </a>
             </div>

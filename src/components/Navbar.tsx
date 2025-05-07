@@ -46,11 +46,11 @@ const Navbar = () => {
       
   className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
     isScrolled
-      ?  'bg-gradient-to-b from-green-800 to-green-500/90 backdrop-blur-md shadow-lg'
+      ?  'bg-gradient-to-b from-blue-800 to-blue-500/90 backdrop-blur-md shadow-lg'
       : 'bg-transparent'
   }`}
     >
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center text-white hover:text-green-800 transition-colors cursor-pointer font-medium">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center text-white hover:text-blue-800 transition-colors cursor-pointer font-medium">
       
         {/* Logo */}
         <motion.div
@@ -60,7 +60,7 @@ const Navbar = () => {
           className="flex items-center"
         >
           <span className="text-2xl font-bold gradient-text">
-            Tribal World
+            MMC
           </span>
         </motion.div>
 
@@ -102,9 +102,11 @@ const Navbar = () => {
           <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary-400 transition-colors">
             <FaTelegram size={20} />
           </a>
-          <button className="bg-gradient-to-b from-green-500 to-gray-900 text-white px-7 py-3 rounded-full font-semibold shadow-[0_4px_15.7px_rgba(12,7,50,0),_inset_0_-2px_2px_1px_#34d399,_inset_0_2px_3px_3px_rgb(14,22,35)] transition-all duration-300 hover:from-green-600 hover:to-gray-800 hover:shadow-[0_4px_20px_rgba(12,7,50,0),_inset_0_-2px_2px_1px_#6ee7b7,_inset_0_2px_4px_3px_rgb(14,22,35)]">
+          <button className="bg-gradient-to-b from-blue-700 to-gray-900 text-white px-7 py-3 rounded-full font-semibold  transition-all duration-300 hover:from-blue-800 hover:to-gray-800 hover:shadow-[ 0 4px 20px rgba(0, 0, 255, 0.3), 
+  inset 0 -2px 2px 1px #3b82f6, 
+  inset 0 2px 4px 3px rgb(29, 78, 216)]">
             Connect Wallet
-          </button>
+          </button> 
         </motion.div>
 
         {/* Mobile Menu Button */}

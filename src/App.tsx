@@ -4,7 +4,7 @@ import Hero from './sections/Hero';
 import About from './sections/About';
 import Tokenomics from './sections/Tokenomics';
 import Roadmap from './sections/Roadmap';
-import Presale from './sections/Presale';
+// import Presale from './sections/Presale';
 import FAQ from './sections/FAQ';
 import Footer from './components/Footer';
 import { BsArrowUp } from 'react-icons/bs';
@@ -42,7 +42,7 @@ const App = () => {
         <About />
         <Tokenomics />
         <Roadmap />
-        <Presale />
+        {/* <Presale /> */}
         <FAQ />
       </main>
 
