@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import About from './sections/About';
-import Tokenomics from './sections/Tokenomics';
+// import Tokenomics from './sections/Tokenomics';
 import Roadmap from './sections/Roadmap';
 // import Presale from './sections/Presale';
 import FAQ from './sections/FAQ';
 import Footer from './components/Footer';
 import { BsArrowUp } from 'react-icons/bs';
 import { AnimatePresence, motion } from 'framer-motion';
-
+import UpcomingFeatures from './sections/upcoming';
 const App = () => {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
 
@@ -40,7 +40,8 @@ const App = () => {
       <main>
         <Hero />
         <About />
-        <Tokenomics />
+        <UpcomingFeatures />
+        {/* <Tokenomics /> */}
         <Roadmap />
         {/* <Presale /> */}
         <FAQ />

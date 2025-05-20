@@ -30,9 +30,9 @@ const Navbar = () => {
   const navLinks = [
     { id: 'home', text: 'Home' },
     { id: 'about', text: 'About' },
-    { id: 'tokenomics', text: 'Tokenomics' },
+    { id: 'footer', text: 'Contact' },
     { id: 'roadmap', text: 'Roadmap' },
-    { id: 'presale', text: 'Presale' },
+    
     { id: 'faq', text: 'FAQ' },
   ];
 

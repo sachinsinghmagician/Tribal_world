@@ -94,9 +94,9 @@ const Tokenomics = () => {
       className="relative inset-0 bg-gradient-to-b from-[rgba(0,112,255,0.1)] via-[rgba(0,112,255,0.2)] to-blue-900/90 overflow-hidden"
     >
       {/* Background elements */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[url('/images/network-blue-orange.jpg')] bg-cover bg-center opacity-10" />
-      </div>
+      </div> */}
 
       <div className="container mx-auto px-4 relative z-10 py-16" ref={sectionRef}>
         <motion.div
@@ -119,7 +119,7 @@ const Tokenomics = () => {
             {/* Left side - Welcome Banner */}
             <div className="flex flex-col items-center justify-center space-y-8">
              
-              <SpaceTunnel />
+              {/* <SpaceTunnel /> */}
             </div>
 
             {/* Right side - Token Details */}
@@ -136,10 +136,10 @@ const Tokenomics = () => {
                
               </motion.h3>
 
-              <div className="p-8 w-full">
+              {/* <div className="p-8 w-full">
                 <h2 className="text-2xl font-bold text-white text-center mb-8">Token Information</h2>
                 <SpinningBorderCard tokenDetails={tokenDetails} />
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>

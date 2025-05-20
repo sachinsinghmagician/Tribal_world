@@ -12,36 +12,37 @@ const Roadmap = () => {
       phase: 'Phase 1: Foundation',
       quarter: 'Q2 2025',
       status: 'completed',
-      milestones: [
-        'Concept development and whitepaper publication',
-        'Team formation and advisory board establishment',
-        'Initial seed funding secured',
-        'Community building initiatives launched',
-        'Smart contract development and auditing'
+      milestones:[
+        "Concept & Whitepaper Release",
+        "Team & Advisory Board Formation",
+        "Seed Funding Secured",
+        "Community Building Launched",
+        "Smart Contract Development & Audit"
       ]
     },
     {
       phase: 'Phase 2: Presale & Development',
       quarter: 'Q3 2025',
-      status: 'current',
+      status: 'upcoming',
       milestones: [
-        'Private sale for strategic investors',
-        'Public presale launch',
-        'Testnet deployment and bug bounty program',
-        'Partnership announcements',
-        'Expanded marketing campaign across platforms'
+        "Private Sale for Strategic Investors",
+        "Public Presale Launch",
+        "Testnet Launch & Bug Bounty",
+        "Partnership Announcements",
+        "Multi-Platform Marketing Expansion"
       ]
+      
     },
     {
       phase: 'Phase 3: Launch & Growth',
       quarter: 'Q4 2025',
       status: 'upcoming',
       milestones: [
-        'Mainnet launch and token generation event',
-        'DEX and CEX listings',
-        'Staking platform deployment',
-        'Cross-chain bridge implementation',
-        'First governance proposal voting'
+        "Mainnet Launch & Token Generation Event",
+  "Listings on DEX & CEX Platforms",
+  "Staking Platform Launch",
+  "Cross-Chain Bridge Integration",
+  "First Governance Proposal Live"
       ]
     },
     {

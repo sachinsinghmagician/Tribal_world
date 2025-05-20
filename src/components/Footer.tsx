@@ -80,7 +80,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-[rgba(39,57,255,0.13)] via-[rgba(39, 255, 118, 0.02)] to-[rgba(50,39,255,0.1)]">
+    <footer id='footer' className="bg-gradient-to-b from-[rgba(39,57,255,0.13)] via-[rgba(39, 255, 118, 0.02)] to-[rgba(50,39,255,0.1)]">
       <div className="container mx-auto px-4 py-12">
         <motion.div
           initial="hidden"
